@@ -25,20 +25,67 @@ class MyApp extends StatelessWidget {
 class HomeContent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child:Container(
-        child: Image.network(
-          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598628853327&di=c3507362b630cf1134d7ab23168a159b&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F05%2F00%2F01300000194285122188000535877.jpg",
-          alignment: Alignment.topLeft, //显示的位置，对齐方式
-          color: Colors.blue, // 图片的颜色
-          colorBlendMode: BlendMode.screen, // 图片混合模式 配合color使用
-        ),
-        width: 300,
-        height: 300,
-        decoration: BoxDecoration(
-          color: Colors.yellow
-        ),
-      )
+    return Container(
+      height: 300,
+      width: 300,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.yellow,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.lightGreen,
+            child: ListView(
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.teal,
+                  child: Text('文本组件'),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.deepPurple,
+                  child: Text('文本组件'),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.yellow,
+                  child: Text('文本组件'),
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.indigo,
+                  child: Text('文本组件'),
+                )
+              ],
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.amber,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.red,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.deepPurple,
+          )
+        ],
+      ),
     );
   }
 
