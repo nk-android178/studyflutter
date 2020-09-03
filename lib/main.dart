@@ -37,6 +37,8 @@ class Mybtton extends StatelessWidget {
 
 class HomeContent extends StatelessWidget {
   @override
-  Widget build(BuildContext context) { // wrap 水平布局超出后自动换行，类似流布局
+  Widget build(BuildContext context) {
+    // wrap 水平布局超出后自动换行，类似流布局
     return Mybtton("第一季");
+  }
 }
