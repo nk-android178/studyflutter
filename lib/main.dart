@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'pages/tabs.dart';
+import 'router/Routers.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,12 +8,21 @@ void main() {
 
 // StatelessWidget 无状态的组件
 class MyApp extends StatelessWidget {
+
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       //MaterialApp一般作为根组件
-      home: Text("tab"),
+//      home: Tabs(),
+      initialRoute: '/',//初始化路由入口
+      //配置根组件命名路由
+//      routes: {
+//        '/form':(context)=>FormPage(),
+//        '/search':(contextt)=>SearchPage()
+//      },
+      onGenerateRoute: onGenerateRoute,
       theme: ThemeData(primarySwatch: Colors.blue),
     );
   }

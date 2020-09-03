@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../Form.dart';
 
 class CategotyPages extends StatefulWidget {
   @override
@@ -8,8 +9,23 @@ class CategotyPages extends StatefulWidget {
 class _CategotyPagesState extends State<CategotyPages> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("分类"),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        RaisedButton(
+          child: Text("跳转到表单页面并传值"),
+          onPressed: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context)=>FormPage(title:"跳转值")
+              )
+            );
+          },
+          color: Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        )
+      ],
     );
   }
 }
