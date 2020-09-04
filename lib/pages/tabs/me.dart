@@ -8,8 +8,17 @@ class MyPages extends StatefulWidget {
 class _MyPagesState extends State<MyPages> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("我的"),
+    return Column(
+      children: [
+        RaisedButton(
+          child: Text("用户登录"),
+          onPressed: (){
+            Navigator.pushNamed(context, "/login",arguments: {
+              "id": 136
+            });
+          },
+        )
+      ],
     );
   }
 }
