@@ -36,7 +36,7 @@ class _loginnextState extends State<loginnext> {
       children: [
         TextField(
           controller: phoneController,
-          keyboardType: TextInputType.number,
+          keyboardType: TextInputType.phone,
           decoration: InputDecoration(
               contentPadding: EdgeInsets.all(10.0),
               icon: Icon(Icons.phone),
@@ -47,7 +47,7 @@ class _loginnextState extends State<loginnext> {
         ),
         TextField(
           controller: passController,
-          keyboardType: TextInputType.number,
+          keyboardType: TextInputType.visiblePassword,
           decoration: InputDecoration(
               contentPadding: EdgeInsets.all(10.0),
               icon: Icon(Icons.lock),

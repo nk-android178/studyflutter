@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutternext/pages/tabs.dart';
 
 class CheckPage extends StatelessWidget {
   final argments;
@@ -16,7 +17,9 @@ class CheckPage extends StatelessWidget {
           RaisedButton(
             child: Text('确定'),
             onPressed: (){
-//              Navigator.pushAndRemoveUntil(context, newRoute, (route) => false)
+              Navigator.of(context).pushAndRemoveUntil(
+              new MaterialPageRoute(builder: (context)=>Tabs(index: 3))
+              , (route) => route ==  null);
             },
           )
         ],

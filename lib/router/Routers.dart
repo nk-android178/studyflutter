@@ -8,7 +8,7 @@ import '../pages/login/check.dart';
 
 //配置路由
 final routes = {
-  '/': (context, {arguments}) => Tabs(), // 加arguments可以传值
+  '/': (context) => Tabs(), // 加arguments可以传值
   '/form': (context, {arguments}) => FormPage(),
   '/search': (context, {arguments}) => SearchPage(argments: arguments),
   '/login': (context, {arguments}) => LoginPage(argments: arguments),
