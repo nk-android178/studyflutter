@@ -8,11 +8,13 @@ class FormPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton( // 浮动按钮 在底部
-          child: Text("返回"),
+          child: Icon(Icons.add,color: Colors.black26,size: 40,),//Text("返回"),
           onPressed: (){
             Navigator.of(context).pop();
-          }
+          },
+          backgroundColor: Colors.yellow,
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
         title: Text(this.title),
       ),

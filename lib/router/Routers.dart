@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import '../pages/Form.dart';
-import '../pages/search.dart';
+import '../pages/funpage/Form.dart';
+import '../pages/funpage/search.dart';
 import '../pages/tabs.dart';
 import '../pages/login/login.dart';
 import '../pages/login/register.dart';
 import '../pages/login/check.dart';
+import '../pages/funpage/TabBarController.dart';
+import '../pages/funpage/timer.dart';
 
 //配置路由
 final routes = {
@@ -14,6 +16,8 @@ final routes = {
   '/login': (context, {arguments}) => LoginPage(argments: arguments),
   '/register': (context, {arguments}) => RegisterPage(argments: arguments),
   '/check': (context, {arguments}) => CheckPage(argments: arguments),
+  '/tabbarcontroller': (context, {arguments}) => TabBarControllerPage(argments: arguments),
+  '/timer': (context) => TimerPage()
 };
 
 //配置根组件命名路由传参

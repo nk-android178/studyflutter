@@ -28,6 +28,26 @@ class _TabsState extends State<Tabs> {
     return Scaffold(
       //Scaffold是一个路由页的骨架
       appBar: AppBar(title: Text('flutter demo')),
+      floatingActionButton: Container(
+        height: 80,
+        width: 80,
+        padding: EdgeInsets.all(8),
+        margin: EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.white
+        ),
+        child: FloatingActionButton(
+          child: Icon(Icons.add,color: Colors.black,size: 50),
+            onPressed: (){
+              setState(() { // 改变状态
+                this._currentIndex = 2;
+              });
+            },
+          backgroundColor: this._currentIndex==2?Colors.blue:Colors.yellow,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: this._pagelist[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex, // 配置对应的索引值

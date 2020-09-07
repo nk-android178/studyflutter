@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'pages/tabs.dart';
 import 'router/Routers.dart';
 
 void main() {
@@ -14,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,// 去掉debug图标
       //MaterialApp一般作为根组件
 //      home: Tabs(),
       initialRoute: '/',//初始化路由入口
