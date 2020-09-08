@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'router/Routers.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,6 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [                             //国际化
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [                                   //国际化
+        const Locale('zh','CH'),
+        const Locale('en','US'),
+      ],
       debugShowCheckedModeBanner: false,// 去掉debug图标
       //MaterialApp一般作为根组件
 //      home: Tabs(),

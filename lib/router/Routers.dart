@@ -7,6 +7,9 @@ import '../pages/login/register.dart';
 import '../pages/login/check.dart';
 import '../pages/funpage/TabBarController.dart';
 import '../pages/funpage/timer.dart';
+import '../pages/funpage/swiper.dart';
+import '../pages/funpage/dialog.dart';
+import '../pages/funpage/httpdata.dart';
 
 //配置路由
 final routes = {
@@ -17,7 +20,10 @@ final routes = {
   '/register': (context, {arguments}) => RegisterPage(argments: arguments),
   '/check': (context, {arguments}) => CheckPage(argments: arguments),
   '/tabbarcontroller': (context, {arguments}) => TabBarControllerPage(argments: arguments),
-  '/timer': (context) => TimerPage()
+  '/timer': (context) => TimerPage(),
+  '/swiper': (context) => SwiperPage(),
+  '/dialog': (context) => DialogPage(),
+  '/httpdata': (context) => HttpDataPage(),
 };
 
 //配置根组件命名路由传参

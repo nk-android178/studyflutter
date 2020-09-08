@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -63,6 +64,33 @@ class _HomePageState extends State<HomePage> {
             color: Theme.of(context).accentColor,
             textTheme: ButtonTextTheme.primary,
           ),
+          RaisedButton(
+            child: Text("swiper轮播图"),
+            onPressed: (){
+              //通过命令路由传参数
+              Navigator.pushNamed(context, '/swiper');
+            },
+            color: Theme.of(context).accentColor,
+            textTheme: ButtonTextTheme.primary,
+          ),
+          RaisedButton(
+            child: Text("dialog提示框"),
+            onPressed: (){
+              //通过命令路由传参数
+              Navigator.pushNamed(context, '/dialog');
+            },
+            color: Theme.of(context).accentColor,
+            textTheme: ButtonTextTheme.primary,
+          ),
+          RaisedButton(
+            child: Text("http请求"),
+            onPressed: (){
+              //通过命令路由传参数
+              Navigator.pushNamed(context, '/httpdata');
+            },
+            color: Theme.of(context).accentColor,
+            textTheme: ButtonTextTheme.primary,
+          )
         ],
       ),
       drawer: Drawer(
