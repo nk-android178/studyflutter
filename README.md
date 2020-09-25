@@ -1,6 +1,6 @@
 # flutternext
 
-A new Flutter application.
+作为学习用例，熟悉基本的用法
 
 ## Getting Started
 
